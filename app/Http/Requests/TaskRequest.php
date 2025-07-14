@@ -2,10 +2,9 @@
 
 namespace App\Http\Requests;
 
-use Faker\Guesser\Name;
 use Illuminate\Foundation\Http\FormRequest;
 
-class RegisterRequest extends FormRequest
+class TaskRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,9 +22,9 @@ class RegisterRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'     => ['required','max:60'],
-            'email'    => ['required','email','max:50','unique:users,email'],
-            'password' => ['required','min:6','max:32','confirmed'],
+            'title'       => ['required'],
+            'description' => ['required'],
+            'status'      => ['required'],
         ];
     }
 }
