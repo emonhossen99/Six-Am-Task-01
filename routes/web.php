@@ -1,8 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +24,9 @@ Route::post('/logout', [LoginController::class,'logout'])->name('logout');
 // User Register Actions
 Route::get('/register', [RegisterController::class,'index'])->name('register');
 Route::post('/register', [RegisterController::class,'registerStore'])->name('register.store');
+
+
+// Route::get('/api/documentation', function () {
+//     return redirect('/api/documentation/index.html');
+// });
 

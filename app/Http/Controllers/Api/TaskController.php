@@ -11,6 +11,16 @@ use App\Http\Resources\TaskResource;
 class TaskController extends Controller
 {
     /**
+     * @OA\Get(
+     *     path="/api/tasks",
+     *     tags={"Tasks"},
+     *     summary="Get all tasks",
+     *     security={{"bearerAuth":{}}},
+     *     @OA\Response(response="200", description="List of tasks")
+     * )
+     */
+    
+    /**
      * Display a listing of the resource.
      */
     public function index()
