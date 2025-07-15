@@ -32,10 +32,15 @@ class TaskController extends Controller
      *     @OA\RequestBody(
      *         required=true,
      *         @OA\JsonContent(
-     *             type="object",
-     *             @OA\Property(property="title", type="string"),
-     *             @OA\Property(property="description", type="string"),
-     *             @OA\Property(property="status", type="string")
+     *             required={"title","description","status"},
+     *             @OA\Property(property="title", format="text", type="string",example=""),
+     *             @OA\Property(property="description", format="text", type="string",example=""),
+     *             @OA\Property(
+    *                 property="status",
+    *                 type="string",
+    *                 enum={"0", "1"},
+    *                 description="0 = Pending, 1 = Publish"
+    *             )
      *         )
      *     ),
      *     @OA\Response(response=201, description="Task created successfully.")
@@ -85,9 +90,15 @@ class TaskController extends Controller
      *         required=true,
      *         @OA\JsonContent(
      *             type="object",
-     *             @OA\Property(property="title", type="string"),
-     *             @OA\Property(property="description", type="string"),
-     *             @OA\Property(property="status", type="string")
+     *             required={"title","description","status"},
+     *             @OA\Property(property="title", type="string",example=""),
+     *             @OA\Property(property="description", type="string",example=""),
+     *             @OA\Property(
+    *                 property="status",
+    *                 type="string",
+    *                 enum={"0", "1"},
+    *                 description="0 = Pending, 1 = Publish"
+    *             )
      *         )
      *     ),
      *     @OA\Response(response=200, description="Task updated successfully.")

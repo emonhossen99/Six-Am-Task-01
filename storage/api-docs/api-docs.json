@@ -25,17 +25,22 @@
                                 "properties": {
                                     "name": {
                                         "type": "string",
-                                        "example": "John Doe"
+                                        "example": ""
                                     },
                                     "email": {
                                         "type": "string",
                                         "format": "email",
-                                        "example": "john@example.com"
+                                        "example": ""
                                     },
                                     "password": {
                                         "type": "string",
                                         "format": "password",
-                                        "example": "password123"
+                                        "example": ""
+                                    },
+                                    "password_confirmation": {
+                                        "type": "string",
+                                        "format": "password",
+                                        "example": ""
                                     }
                                 },
                                 "type": "object"
@@ -58,11 +63,11 @@
                                                 },
                                                 "name": {
                                                     "type": "string",
-                                                    "example": "John Doe"
+                                                    "example": ""
                                                 },
                                                 "email": {
                                                     "type": "string",
-                                                    "example": "john@example.com"
+                                                    "example": ""
                                                 }
                                             },
                                             "type": "object"
@@ -103,12 +108,12 @@
                                     "email": {
                                         "type": "string",
                                         "format": "email",
-                                        "example": "john@example.com"
+                                        "example": ""
                                     },
                                     "password": {
                                         "type": "string",
                                         "format": "password",
-                                        "example": "password123"
+                                        "example": ""
                                     }
                                 },
                                 "type": "object"
@@ -159,11 +164,11 @@
                                         },
                                         "name": {
                                             "type": "string",
-                                            "example": "John Doe"
+                                            "example": ""
                                         },
                                         "email": {
                                             "type": "string",
-                                            "example": "john@example.com"
+                                            "example": ""
                                         }
                                     },
                                     "type": "object"
@@ -241,15 +246,29 @@
                     "content": {
                         "application/json": {
                             "schema": {
+                                "required": [
+                                    "title",
+                                    "description",
+                                    "status"
+                                ],
                                 "properties": {
                                     "title": {
-                                        "type": "string"
+                                        "type": "string",
+                                        "format": "text",
+                                        "example": ""
                                     },
                                     "description": {
-                                        "type": "string"
+                                        "type": "string",
+                                        "format": "text",
+                                        "example": ""
                                     },
                                     "status": {
-                                        "type": "string"
+                                        "description": "0 = Pending, 1 = Publish",
+                                        "type": "string",
+                                        "enum": [
+                                            "0",
+                                            "1"
+                                        ]
                                     }
                                 },
                                 "type": "object"
@@ -308,15 +327,27 @@
                     "content": {
                         "application/json": {
                             "schema": {
+                                "required": [
+                                    "title",
+                                    "description",
+                                    "status"
+                                ],
                                 "properties": {
                                     "title": {
-                                        "type": "string"
+                                        "type": "string",
+                                        "example": ""
                                     },
                                     "description": {
-                                        "type": "string"
+                                        "type": "string",
+                                        "example": ""
                                     },
                                     "status": {
-                                        "type": "string"
+                                        "description": "0 = Pending, 1 = Publish",
+                                        "type": "string",
+                                        "enum": [
+                                            "0",
+                                            "1"
+                                        ]
                                     }
                                 },
                                 "type": "object"
