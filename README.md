@@ -149,3 +149,40 @@
     
 
 ---
+# Laravel Inventory Management System
+
+## Features
+- Manage Products, Categories, and Transactions.
+- Handles large datasets efficiently with eager loading and caching.
+
+## Optimization Techniques
+
+### 1. Eager Loading
+Used `with('category')` in the controller to avoid the N+1 query problem.
+
+### 2. Query Caching
+Cached expensive queries using `Cache::remember()` to improve response time.
+
+### 3. Indexing
+Added database indexes on `category_id`, `product_id`, and `type` for faster lookup.
+
+### 4. Debugging Tools
+Used [Laravel Debugbar](https://github.com/barryvdh/laravel-debugbar) to measure:
+- Number of queries
+- Query time
+- Cache usage
+
+### Results
+| Operation               | Queries | Time      |
+|------------------------|---------|-----------|
+| Without optimization   | ~52     | ~300ms    |
+| With eager loading     | 2       | ~90ms     |
+| With caching           | 0       | ~20ms     |
+
+## Getting Started
+
+```bash
+git clone ...
+composer install
+php artisan migrate --seed
+php artisan serve
