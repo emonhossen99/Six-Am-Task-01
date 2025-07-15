@@ -1,25 +1,52 @@
 # Quickstart
 
-1. **Run the Project**: Execute the following command in your terminal:
+**Run the Project**: Execute the following command in your terminal:
 
     Clone Project To Github
     ```bash
     git clone https://github.com/emonhossen99/Six-Am-Task-01.git
     ```
 
-    Or install it with:
+    Env and database setup (MYSQL) and run below the command:
 
     ```bash
-    npm install -g @google/gemini-cli
+    composer update
     ```
 
-    Then, run the CLI from anywhere:
+    Generate JWT token:
 
     ```bash
-    gemini
+    php artisan jwt:secret
     ```
 
 ---
+
+**1 .Task One Check**:
+
+    Run Seeder:
+    ```bash
+    php artisan db:seed
+    ```
+
+    Run Project:
+    ```bash
+    php artisan serve
+    ```
+
+    Open to local server then you can see one login interface :
+    ```bash
+    composer update
+    ```
+
+    Generate JWT token:
+
+    ```bash
+    php artisan jwt:secret
+    ```
+
+---
+
+
 
 ### Laravel-এর জন্য সম্পূর্ণ উদাহরণ:
 
