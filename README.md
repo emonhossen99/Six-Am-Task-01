@@ -1,6 +1,6 @@
 # Quickstart
 
-**Run the Project**: Execute the following command in your terminal:
+1. **Run the Project**: Execute the following command in your terminal:
 
     Clone Project To Github
     ```bash
@@ -21,7 +21,7 @@
 
 ---
 
-**1 .Task One Check**:
+2. **Task One Check**:
 
     Run Seeder:
     ```bash
