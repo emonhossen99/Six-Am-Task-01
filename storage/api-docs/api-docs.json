@@ -5,13 +5,13 @@
         "version": "1.0.0"
     },
     "paths": {
-        "/api/auth/register": {
+        "/api/register": {
             "post": {
                 "tags": [
                     "Authentication"
                 ],
                 "summary": "User Registration",
-                "operationId": "eb3623f9bcd09a1dacbefaac07aed1bb",
+                "operationId": "a718f172ff3ac464d723835815f8fb57",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -83,13 +83,13 @@
                 }
             }
         },
-        "/api/auth/login": {
+        "/api/login": {
             "post": {
                 "tags": [
                     "Authentication"
                 ],
                 "summary": "User Login",
-                "operationId": "f77777235d676b651c9465807d8f9485",
+                "operationId": "44212a9096e4b09358281e9ec8a0701d",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -139,13 +139,13 @@
                 }
             }
         },
-        "/api/auth/me": {
+        "/api/me": {
             "get": {
                 "tags": [
                     "Authentication"
                 ],
                 "summary": "Get current logged in user",
-                "operationId": "57247eca7a7733a6b79ce17999f79422",
+                "operationId": "f606b7972b0f95109c9cd5b591061f41",
                 "responses": {
                     "200": {
                         "description": "User data",
@@ -182,13 +182,13 @@
                 ]
             }
         },
-        "/api/auth/logout": {
+        "/api/logout": {
             "post": {
                 "tags": [
                     "Authentication"
                 ],
                 "summary": "Logout user",
-                "operationId": "c4b3c6f1776909e546a421283c044ac3",
+                "operationId": "79854151e609bd20032aa5aa4d5a35c0",
                 "responses": {
                     "200": {
                         "description": "Successfully logged out",
