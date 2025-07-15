@@ -6,25 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
 class LoginController extends Controller
 {
-    public function login()
-    {
-        // Check User Login 
-        if (Auth::check()) {
-            $user = Auth::user();
-            if ($user->role_id === 1) {
-                // User role is admin then redirect to admin dashboard 
-                return redirect()->route('admin.dashboard.index');
-            } else {
-                // User role is user then redirect to user dashboard
-                return redirect()->route('user.dashboard.index');
-            }
-        }
-        return view('auth.login');
-    }
-
+    
     public function loginStore(LoginRequest $request)
     {
         if (Auth::attempt($request->only('email', 'password'))) {
@@ -35,6 +19,8 @@ class LoginController extends Controller
                 return redirect()->route('user.dashboard.index')->with('success', 'User Login Successfully');
             }
         }
+
+        return response()->json(['message' => 'Invalid credentials'], 401);
     }
 
     public function logout(Request $request)

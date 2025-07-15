@@ -8,12 +8,6 @@ use App\Http\Requests\TaskRequest;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\TaskResource;
 
-/**
- * @OA\Info(
- *     title="Task Management API",
- *     version="1.0.0"
- * )
- */
 class TaskController extends Controller
 {
     /**
