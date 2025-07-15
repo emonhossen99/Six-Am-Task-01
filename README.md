@@ -2,7 +2,7 @@
 
 1. **Run the Project**: Execute the following command in your terminal:
 
-    Clone Project To Github
+    Clone Project To Github :
     ```bash
     git clone https://github.com/emonhossen99/Six-Am-Task-01.git
     ```
@@ -43,6 +43,41 @@
     ```bash
     php artisan jwt:secret
     ```
+
+    Provide  Email & Password (Admin Route Check):
+    Email :
+
+    ```bash
+    admin@gmail.com
+    ```
+    Password :
+    ```bash
+    admin@gmail.com
+    ```
+
+    Provide  Email & Password (User Route Check):
+    Email :
+
+    ```bash
+    user@gmail.com
+    ```
+    Password :
+    ```bash
+    admin@gmail.com
+    ```
+
+    ## 🔐 Registering a New User
+
+    If you want to register as a new user:
+
+    1. Click the **"Login"** button located below the **"Create Account"** section.
+    2. You will be redirected to the **registration page**.
+    3. On the registration form, please fill in the following details:
+    - **Name**
+    - **Email**
+    - **Password**
+    - **Confirm Password**
+    4. After submitting the form, your account will be created successfully.
 
 ---
 
