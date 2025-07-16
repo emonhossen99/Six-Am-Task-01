@@ -10,6 +10,10 @@
     Env and database setup (MYSQL) and run below the command:
 
     ```bash
+    php artisan migrate
+    ```
+    Update Composer
+    ```bash
     composer update
     ```
 
@@ -22,7 +26,6 @@
 ---
 
 1. **Task One Check**:
-
     Run Seeder:
     ```bash
     php artisan db:seed
@@ -31,17 +34,6 @@
     Run Project:
     ```bash
     php artisan serve
-    ```
-
-    Open to local server then you can see one login interface :
-    ```bash
-    composer update
-    ```
-
-    Generate JWT token:
-
-    ```bash
-    php artisan jwt:secret
     ```
 
     Provide  Email & Password (Admin Route Check):
@@ -66,7 +58,7 @@
     admin@gmail.com
     ```
 
-    ## 🔐 Registering a New User
+    ## Registering a New User
 
     If you want to register as a new user:
 
@@ -97,7 +89,7 @@
     ```bash
     /api/documentation
     ```
-    ## 🔐 Registering a New User With Swagger
+    ##  Registering a New User With Swagger
 
     First api will be create a new user provide (api/register):
     - **Name**
@@ -116,32 +108,32 @@
    Fouth api will be logout auth user  (api/logout):
 
 
-    # 🔐 Task Management API with Swagger
+    #  Task Management API with Swagger
 
     This is a simple and secure Task Management API that allows **authenticated users** to create, update, and delete their own tasks. The API is fully documented using **Swagger** for easy testing and integration.
 
     ---
 
-    ### ✅ Get All Tasks (Authenticated User)
+    ###  Get All Tasks (Authenticated User)
     - Retrieve all tasks created by the currently logged-in user.
 
-    ### ➕ Create a New Task
+    ###  Create a New Task
     - Create a task by providing the following fields:
     - `title` (string) — Task title  
     - `description` (string) — Task details  
     - `status` (integer) — `0` for **Pending**, `1` for **Publish**
 
-    ### 🔍 Get a Single Task
+    ###  Get a Single Task
     - Retrieve a specific task using its unique `id`.
 
-    ### ✏️ Update a Task
+    ###  Update a Task
     - Update a task by providing:
     - `id` (integer) — Task ID  
     - `title` (string) — Updated title  
     - `description` (string) — Updated description  
     - `status` (integer) — `0` for **Pending**, `1` for **Publish**
 
-    ### ❌ Delete a Task
+    ###  Delete a Task
     - Delete a specific task by providing its `id`.
 
     ---
@@ -175,14 +167,6 @@ Used [Laravel Debugbar](https://github.com/barryvdh/laravel-debugbar) to measure
 ### Results
 | Operation               | Queries | Time      |
 |------------------------|---------|-----------|
-| Without optimization   | ~52     | ~300ms    |
-| With eager loading     | 2       | ~90ms     |
-| With caching           | 0       | ~20ms     |
-
-## Getting Started
-
-```bash
-git clone ...
-composer install
-php artisan migrate --seed
-php artisan serve
+| Without optimization   | ~10010  | ~5.94s    |
+| With eager loading     | 2       | ~418ms     |
+| With caching           | 0       | ~374ms     |

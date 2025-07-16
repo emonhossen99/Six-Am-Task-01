@@ -266,8 +266,8 @@
                                         "description": "0 = Pending, 1 = Publish",
                                         "type": "string",
                                         "enum": [
-                                            "0",
-                                            "1"
+                                            "1",
+                                            "0"
                                         ]
                                     }
                                 },
@@ -345,8 +345,8 @@
                                         "description": "0 = Pending, 1 = Publish",
                                         "type": "string",
                                         "enum": [
-                                            "0",
-                                            "1"
+                                            "1",
+                                            "0"
                                         ]
                                     }
                                 },

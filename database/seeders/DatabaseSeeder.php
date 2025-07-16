@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Database\Seeders\ProductSeeder;
 use Database\Seeders\UsersSeeder;
 use Illuminate\Database\Seeder;
 
@@ -15,6 +16,7 @@ class DatabaseSeeder extends Seeder
         // Inset in to admin and user using UsersSeeder
         $this->call([
             UsersSeeder::class,
+            ProductSeeder::class,
         ]);
     }
 }

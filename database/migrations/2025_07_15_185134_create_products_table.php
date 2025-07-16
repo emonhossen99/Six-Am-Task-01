@@ -14,10 +14,12 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name')->index();
-            $table->foreignId('category_id')->constrained('categories')->cascadeOnDelete()->index();
+            $table->foreignId('category_id')->constrained('categories')->cascadeOnDelete();
             $table->integer('stock')->default(0);
-            $table->enum('status',[0,1])->commet('0 = Pending , 1 = Publish')->index();
+            $table->double('price');
+            $table->enum('status',[0,1])->comment('0 = Pending , 1 = Publish')->index();
             $table->timestamps();
+            $table->index('category_id');
         });
     }
 

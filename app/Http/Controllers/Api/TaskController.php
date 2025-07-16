@@ -38,7 +38,7 @@ class TaskController extends Controller
      *             @OA\Property(
     *                 property="status",
     *                 type="string",
-    *                 enum={"0", "1"},
+    *                 enum={"1", "0"},
     *                 description="0 = Pending, 1 = Publish"
     *             )
      *         )
@@ -96,7 +96,7 @@ class TaskController extends Controller
      *             @OA\Property(
     *                 property="status",
     *                 type="string",
-    *                 enum={"0", "1"},
+    *                 enum={"1", "0"},
     *                 description="0 = Pending, 1 = Publish"
     *             )
      *         )
