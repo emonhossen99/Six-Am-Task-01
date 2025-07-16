@@ -170,3 +170,19 @@ Used [Laravel Debugbar](https://github.com/barryvdh/laravel-debugbar) to measure
 | Without optimization   | ~10010  | ~5.94s    |
 | With eager loading     | 2       | ~418ms     |
 | With caching           | 0       | ~374ms     |
+
+
+
+5.**Route For Checking Data** 
+    Before optimization:
+    ```bash
+    /without-optimization
+    ```
+    After eager loading :
+    ```bash
+    with-eager-loading
+    ```
+    With caching :
+    ```bash
+    with-query-caching
+    ```

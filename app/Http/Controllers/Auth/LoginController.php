@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Http\Requests\LoginRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+
 class LoginController extends Controller
 {
     public function login()
@@ -15,13 +17,13 @@ class LoginController extends Controller
             $user = Auth::user();
             if ($user->role_id === 1) {
                 // User role is admin then redirect to admin dashboard
-                return redirect()->route('admin.dashboard.index');
+                return redirect()->intended('/admin/dashboard');;
             } else {
                 // User role is user then redirect to user dashboard
-                return redirect()->route('user.dashboard.index');
+                return redirect()->intended('/user/dashboard');
             }
         }
-        return view('auth.login');
+       return Inertia::render('Auth/Login');
     }
 
 
@@ -35,8 +37,7 @@ class LoginController extends Controller
                 return redirect()->route('user.dashboard.index')->with('success', 'User Login Successfully');
             }
         }
-
-        return response()->json(['message' => 'Invalid credentials'], 401);
+        return back()->with('error','Invalid credentials');
     }
 
     public function logout(Request $request)
