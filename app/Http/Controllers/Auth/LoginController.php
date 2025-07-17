@@ -12,6 +12,7 @@ class LoginController extends Controller
 {
     public function login()
     {
+        
         // Check User Login
         if (Auth::check()) {
             $user = Auth::user();
@@ -29,6 +30,7 @@ class LoginController extends Controller
 
     public function loginStore(LoginRequest $request)
     {
+        dd($request->all());
         if (Auth::attempt($request->only('email', 'password'))) {
             $user = Auth::user();
             if ($user->role_id === 1) {
